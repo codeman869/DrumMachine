@@ -1,0 +1,36 @@
+#drum-machine {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10% 10% 10% 10%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-row-gap: 10px;
+  text-align: center;
+}
+
+h6 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  margin: 0px;
+  text-align: center;
+}
+
+#display {
+  border: 1px solid blue;
+  border-radius: 10px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 50px;
+}
+
+#switch {
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: 0 auto;
+}
