@@ -1,0 +1,9 @@
+#display {
+  border: 1px solid blue;
+  border-radius: 10px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 50px;
+}
