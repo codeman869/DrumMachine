@@ -16,7 +16,6 @@ export default connect(
       if (e.keyCode === props.charCode) {
         document.getElementById(props.id).play();
         props.playKey(props.id);
-        console.log(`You pressed ${props.id}`);
       }
     }
 
@@ -30,11 +29,15 @@ export default connect(
   const [clicked, setClicked] = useState(false);
 
   const showLight = () => {
-    setClicked(!clicked)
+    setClicked(!clicked);
   };
 
   return (
-    <div className={clicked ? "drum-pad pressed" : "drum-pad" } onMouseDown={showLight} onMouseUp={showLight}>
+    <div
+      className={clicked ? "drum-pad pressed" : "drum-pad"}
+      onMouseDown={showLight}
+      onMouseUp={showLight}
+    >
       {props.id}
       <audio id={props.id} src={props.url} className="clip" />
     </div>
