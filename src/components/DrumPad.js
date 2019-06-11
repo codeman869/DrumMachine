@@ -14,8 +14,7 @@ export default connect(
   useEffect(() => {
     function keyDown(e) {
       if (e.keyCode === props.charCode) {
-        document.getElementById(props.id).play();
-        props.playKey(props.id);
+        playKey();
       }
     }
 
@@ -32,11 +31,17 @@ export default connect(
     setClicked(!clicked);
   };
 
+  const playKey = () => {
+    document.getElementById(props.id).play();
+    props.playKey(props.text);
+  };
+
   return (
     <div
       className={clicked ? "drum-pad pressed" : "drum-pad"}
       onMouseDown={showLight}
       onMouseUp={showLight}
+      onClick={playKey}
     >
       {props.id}
       <audio id={props.id} src={props.url} className="clip" />

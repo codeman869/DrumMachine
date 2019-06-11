@@ -11,6 +11,7 @@ export default function DrumKeys(props) {
         charCode={el.charCode}
         key={el.key}
         url={el.url}
+        text={el.text}
         className="drum-pad"
       />
     );
