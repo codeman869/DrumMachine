@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import DrumKeys from "./DrumKeys";
-import Display from "./Display";
+import React from "react";
+import DrumKeys from "./components/DrumKeys";
+import Display from "./components/Display";
 import "./DrumMachine.css";
 
-export default function DrumMachine() {
+export default function DrumMachine(props) {
   return (
     <div id="drum-machine" className="box">
       <div className="title">

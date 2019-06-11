@@ -1,9 +1,9 @@
 import React from "react";
 import DrumPad from "./DrumPad";
 import "./DrumKeys.css";
-import { KEYS } from "./keys";
+import { KEYS } from "../keys";
 
-export default function DrumKeys() {
+export default function DrumKeys(props) {
   let drumKeys = KEYS.map(el => {
     return (
       <DrumPad
