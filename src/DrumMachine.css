@@ -1,14 +1,62 @@
 #drum-machine {
+  background: #222;
+  color: white;
   border: 1px solid black;
   border-radius: 10px;
-  margin: 10% 10% 10% 10%;
+  margin: 0px;
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-row-gap: 5px;
+  grid-row-gap: 2px;
   grid-template-rows: 1fr 2fr;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 10px;
+}
 
+@media only screen and (min-width: 768px) {
+  #drum-machine {
+    background: #222;
+    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 10px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 250px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-template-rows: 1fr 2fr;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #drum-machine {
+    position: absolute;
+    background: #222;
+    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 10px;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    width: 450px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-template-rows: 1fr 2fr;
+    text-align: center;
+  }
 }
 
 .title {
@@ -22,6 +70,10 @@
 
 h6 {
   margin: 0px;
+  font-size: 1em;
+  background: -webkit-linear-gradient(145deg, #aaa, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #switch {

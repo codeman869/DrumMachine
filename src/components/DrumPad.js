@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import playKey from "../actions";
 import "./DrumPad.css";
@@ -15,7 +15,7 @@ export default connect(
     function keyDown(e) {
       if (e.keyCode === props.charCode) {
         document.getElementById(props.id).play();
-        props.playKey(props.id)
+        props.playKey(props.id);
         console.log(`You pressed ${props.id}`);
       }
     }
@@ -27,8 +27,14 @@ export default connect(
     };
   });
 
+  const [clicked, setClicked] = useState(false);
+
+  const showLight = () => {
+    setClicked(!clicked)
+  };
+
   return (
-    <div className="drum-pad">
+    <div className={clicked ? "drum-pad pressed" : "drum-pad" } onMouseDown={showLight} onMouseUp={showLight}>
       {props.id}
       <audio id={props.id} src={props.url} className="clip" />
     </div>

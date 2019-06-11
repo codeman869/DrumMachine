@@ -1,9 +1,24 @@
 #display {
-  border: 1px solid blue;
-  border-radius: 10px;
+  background: #6213fe;
+  color: #b4b5ff;
+  width: 100%;
+  font-size: 2.5em;
+  line-height: 40px;
+  border-radius: 10px 10px 0px 0px;
+  height: 40px;
+  text-align: center;
+}
+
+.displayBackground {
+  background: #000;
+  padding: 10px;
+  padding-bottom: 0px;
+  font-size: 0.5em;
+  text-align: left;
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
   height: 50px;
+  color: #a13036;
 }

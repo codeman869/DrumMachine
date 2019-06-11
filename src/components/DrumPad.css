@@ -1,71 +1,12 @@
 .drum-pad {
-  border: 1px solid red;
   border-radius: 10px;
+  background: #282828;
   height: 50px;
   line-height: 50px;
   text-align: center;
-}
-/*
-#Q {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 2;
+  box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 10px;
 }
 
-#W {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 2;
-  grid-column-end: 3;
+.pressed {
+  box-shadow: rgba(4, 235, 4, 0.2) 5px 5px 10px;
 }
-
-#E {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 3;
-  grid-column-end: 4;
-}
-
-#A {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-
-#S {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
-
-#D {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 3;
-  grid-column-end: 4;
-}
-
-#Z {
-  grid-row-start: 3;
-  grid-row-end: 4;
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-
-#X {
-  grid-row-start: 3;
-  grid-row-end: 4;
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
-
-#C {
-  grid-row-start: 3;
-  grid-row-end: 4;
-  grid-column-start: 3;
-  grid-column-end: 4;
-}
-*/

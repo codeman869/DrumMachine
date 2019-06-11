@@ -9,7 +9,10 @@ export default function DrumMachine(props) {
       <div className="title">
         <h6>Tempest</h6>
       </div>
-      <Display />
+      <div className="displayBackground">
+        <Display />
+        Studio Quality
+      </div>
       <DrumKeys />
     </div>
   );
