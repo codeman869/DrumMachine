@@ -4,6 +4,9 @@
   "description": "A simple drum machine in React",
   "keywords": [],
   "main": "src/index.js",
+  "engines": {
+    "node": "11.x"
+  },
   "dependencies": {
     "babel-eslint": "^10.0.1",
     "enzyme": "3.10.0",
