@@ -5,7 +5,7 @@ import "./styles.css";
 import DrumMachine from "./DrumMachine";
 import store from "./store";
 
-function App() {
+export default function App() {
   //  const [state, dispatch] = useReducer(reducer, initialState);
 
   return <DrumMachine />;
