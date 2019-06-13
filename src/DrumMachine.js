@@ -1,7 +1,7 @@
-import React from "react";
-import DrumKeys from "./components/DrumKeys";
-import Display from "./components/Display";
-import "./DrumMachine.css";
+import React from 'react'
+import DrumKeys from './components/DrumKeys'
+import Display from './components/Display'
+import './DrumMachine.css'
 
 export default function DrumMachine(props) {
   return (
@@ -15,5 +15,5 @@ export default function DrumMachine(props) {
       </div>
       <DrumKeys />
     </div>
-  );
+  )
 }
