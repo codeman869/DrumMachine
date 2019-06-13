@@ -1,11 +1,11 @@
 const initialState = {
-  keyPlayed: ""
-};
+  keyPlayed: '',
+}
 
 export default (state = initialState, action) => {
-  if (action.type === "PLAY_KEY") {
-    return { keyPlayed: action.payload };
+  if (action.type === 'PLAY_KEY') {
+    return { keyPlayed: action.payload }
   } else {
-    return state;
+    return state
   }
-};
+}
