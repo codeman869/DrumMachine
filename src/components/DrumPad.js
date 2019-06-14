@@ -1,16 +1,11 @@
+/* eslint-disable react/prop-types */
+/* global document */
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import playKey from '../actions'
 import './DrumPad.css'
 
-export default connect(
-  null,
-  dispatch => {
-    return {
-      playKey: key => dispatch(playKey(key)),
-    }
-  }
-)(function DrumPad(props) {
+export function DrumPad(props) {
   useEffect(() => {
     function keyDown(e) {
       if (e.keyCode === props.charCode) {
@@ -39,6 +34,7 @@ export default connect(
   return (
     <div
       className={clicked ? 'drum-pad pressed' : 'drum-pad'}
+      id={props.text}
       onMouseDown={showLight}
       onMouseUp={showLight}
       onClick={playKey}
@@ -47,4 +43,13 @@ export default connect(
       <audio id={props.id} src={props.url} className="clip" />
     </div>
   )
-})
+}
+
+export default connect(
+  null,
+  dispatch => {
+    return {
+      playKey: key => dispatch(playKey(key)),
+    }
+  }
+)(DrumPad)
