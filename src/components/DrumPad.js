@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* global document */
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import playKey from '../actions'
 import './DrumPad.css'
@@ -21,13 +21,14 @@ export function DrumPad(props) {
   })
 
   const [clicked, setClicked] = useState(false)
+  let audioRef = React.createRef()
 
   const showLight = () => {
     setClicked(!clicked)
   }
 
   const playKey = () => {
-    document.getElementById(props.id).play()
+    audioRef.current.play()
     props.playKey(props.text)
   }
 
@@ -40,7 +41,7 @@ export function DrumPad(props) {
       onClick={playKey}
     >
       {props.id}
-      <audio id={props.id} src={props.url} className="clip" />
+      <audio id={props.id} ref={audioRef} src={props.url} className="clip" />
     </div>
   )
 }
