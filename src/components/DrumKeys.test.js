@@ -15,7 +15,7 @@ describe('<DrumKeys />', () => {
   it('should have a div with id #drum-keys', () => {
     let wrapper = shallow(<DrumKeys />)
 
-    wrapper.find('#drum-keys').should.have.lengthOf(1)
+    wrapper.exists('#drum-keys').should.be.true
   })
 
   it('should have represent all keys', () => {

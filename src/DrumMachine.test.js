@@ -13,6 +13,6 @@ describe('<DrumMachine />', () => {
 
   it('renders a div with id #drum-machine', () => {
     const wrapper = shallow(<DrumMachine />)
-    wrapper.find('#drum-machine').should.have.lengthOf(1)
+    wrapper.exists('#drum-machine').should.be.true
   })
 })
